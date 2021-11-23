@@ -30,7 +30,7 @@ https://github.com/Team-Code/KA_Offline -->
 
         //Punto penal
         fill(255, 255, 255);
-        ellipse(300,550, 100, 40);
+        ellipse(310,550, 100, 40);
 
         //Lineas
         stroke(255, 255, 255);
@@ -57,29 +57,29 @@ https://github.com/Team-Code/KA_Offline -->
 
 
         //Balón
+        fill(166, 179, 185)
+        ellipse(310, 512, 80, 75)
 
+      //   stroke(230,0,0)
+      // line(310, 512, 310, 380);
+      // line(310, 512, 280, 380);
+      // line(310, 512, 340, 380);
+      ///Programacion de la flecha
 
+      var angulo = 0;
 
-      //   noStroke();
-      //   fill(125, 93, 43);
+      
+      draw_arrow = function(){
 
-      //   ellipse(100, 200, 60, 60); // face
-      //   fill(255, 237, 209);
-      //   ellipse(100, 200+10, 33, 28);
+         while (angulo < 400){
+            stroke(230,0,0)
+            line(310, 512, 310 + angulo, 380);
+            angulo = angulo + 5;
+         }
+      }
 
-
-
-
-      //   ProgramCodeGoesHere
-      //   fill(255, 255, 0);
-      //   ePImage img, img2;llipse(200, 200, 200, 200);
-      //   noFill();
-      //   stroke(0, 0, 0);
-      //   strokeWeight(2);
-      //   arc(200, 200, 150, 100, 0, PI);
-      //   fill(0, 0, 0);
-      //   ellipse(250, 200, 10, 10);
-      //   ellipse(153, 200, 10, 10);
+      draw_arrow();
+      
       
     }};
 
