@@ -13,6 +13,7 @@ var sketchProc = function(processingInstance) {
        fill(0, 0, 0);
        ellipse(250, 200, 10, 10);
        ellipse(153, 200, 10, 10);
+       PImage img, img2;
    }};
 
    // Get the canvas that Processing-js will use

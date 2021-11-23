@@ -19,12 +19,60 @@ https://github.com/Team-Code/KA_Offline -->
  <script>
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
-        size(400, 400); 
+        size(600,650); 
         frameRate(30);
         
-        // ProgramCodeGoesHere
+        //Fondo
+        background(6,76,11);
+        rect(100 ,100, 400, 15);
+        rect(100 ,100, 15, 200);
+        rect(500 ,100, 15, 200);
+
+        //Punto penal
+        fill(255, 255, 255);
+        ellipse(300,550, 100, 40);
+
+        //Lineas
+        stroke(255, 255, 255);
+        line(50, 300, 45, 400);
+        line(50, 300, 550, 300);
+        line(550, 300, 555, 400);
+        line(45, 400, 555, 400);
+        //arco penal
+        //nofill();
+        fill(6, 76, 11);
+        arc(310, 400, 150, 70, 1, 10);
+
+
+        //Portero
+        //top circle
+        fill(10, 10, 10)
+        ellipse(300,200,30,30);
+
+        //middle circle
+        ellipse(300,255,40,40);
+
+        // bottom circle
+        ellipse(300,300,60,60);
+
+
+        //Balón
+
+
+
+      //   noStroke();
+      //   fill(125, 93, 43);
+
+      //   ellipse(100, 200, 60, 60); // face
+      //   fill(255, 237, 209);
+      //   ellipse(100, 200+10, 33, 28);
+
+
+
+
+      //   ProgramCodeGoesHere
       //   fill(255, 255, 0);
-      //   ellipse(200, 200, 200, 200);
+      //   ePImage img, img2;llipse(200, 200, 200, 200);
       //   noFill();
       //   stroke(0, 0, 0);
       //   strokeWeight(2);
@@ -32,6 +80,7 @@ https://github.com/Team-Code/KA_Offline -->
       //   fill(0, 0, 0);
       //   ellipse(250, 200, 10, 10);
       //   ellipse(153, 200, 10, 10);
+      
     }};
 
     // Get the canvas that Processing-js will use
