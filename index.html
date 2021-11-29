@@ -19,69 +19,149 @@ https://github.com/Team-Code/KA_Offline -->
  <script>
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
-        size(600,650); 
-        frameRate(30);
-        
-        //Fondo
-        background(6,76,11);
-        rect(100 ,100, 400, 15);
-        rect(100 ,100, 15, 200);
-        rect(500 ,100, 15, 200);
+         size(600,650); 
+         frameRate(30);
 
-        //Punto penal
-        fill(255, 255, 255);
-        ellipse(310,550, 100, 40);
-
-        //Lineas
-        stroke(255, 255, 255);
-        line(50, 300, 45, 400);
-        line(50, 300, 550, 300);
-        line(550, 300, 555, 400);
-        line(45, 400, 555, 400);
-        //arco penal
-        //nofill();
-        fill(6, 76, 11);
-        arc(310, 400, 150, 70, 1, 10);
-
-
-        //Portero
-        //top circle
-        fill(10, 10, 10)
-        ellipse(300,200,30,30);
-
-        //middle circle
-        ellipse(300,255,40,40);
-
-        // bottom circle
-        ellipse(300,300,60,60);
-
-
-        //Balón
-        fill(166, 179, 185)
-        ellipse(310, 512, 80, 75)
-
-      //   stroke(230,0,0)
-      // line(310, 512, 310, 380);
-      // line(310, 512, 280, 380);
-      // line(310, 512, 340, 380);
-      ///Programacion de la flecha
-
-      var angulo = 0;
+         var angulo = 0;
+         background(6,76,11);
 
       
-      draw_arrow = function(){
+         var drawGame = function(){
 
-         while (angulo < 400){
-            stroke(230,0,0)
-            line(310, 512, 310 + angulo, 380);
-            angulo = angulo + 5;
+            //Fondo
+            
+            rect(100 ,100, 400, 15);
+            rect(100 ,100, 15, 200);
+            rect(500 ,100, 15, 200);
+
+            //Punto penal
+            fill(255, 255, 255);
+            ellipse(310,550, 100, 40);
+
+            //Lineas
+            stroke(255, 255, 255);
+            line(50, 300, 45, 400);
+            line(50, 300, 550, 300);
+            line(550, 300, 555, 400);
+            line(45, 400, 555, 400);
+            //arco penal
+            //nofill();
+            fill(6, 76, 11);
+            arc(310, 400, 150, 70, 1, 10);
+
+
+            //Portero
+            //top circle
+            fill(10, 10, 10)
+            ellipse(300,200,30,30);
+
+            //middle circle
+            ellipse(300,255,40,40);
+
+            // bottom circle
+            ellipse(300,300,60,60);
+
+
+            //Balón
+            fill(166, 179, 185);
+            ellipse(310, 512, 80, 75);
+
+            // fill(230,0,0)
+            // line(310, 512, 310 + angulo, 380);
+            // angulo = 5 + angulo;
+            // if (angulo > 200){
+            //    angulo = -160;
+            // }
+
+         
          }
-      }
+         drawGame();
+         var xPos = 310;
+         var yPos = 512;
+         draw = function(){
+            angulo = 5 + angulo;
+            if (angulo > 200){
+               angulo = -160;
+            }
+            fill(166, 179, 185);
+            ellipse(xPos, yPos, 80, 75);
+            // xPos+=2;
+            // yPos-=1.2;
+            mouseReleased = function(){
+            fill(230,0,0);
+            line(310, 512, 310 + angulo, 380);
+            // xPos+=angulo;
+            // yPos-=angulo;
+            drawGame();
+            }
+            // mousePressed()
+            // fill(166, 179, 185);
+            // ellipse(xPos, yPos, 80, 75);
+            // xPos+=2;
+            // yPos-=1.2;
+            
 
-      draw_arrow();
+         }
+
+         // mouseClicked = function(){
+         //       fill(230,0,0)
+         //       rect(310, 512, 310 + angulo, 380);
+         // }
+
+  }
+
+
+         // mousePressed = function(){
+         //    draw = function(){
+         //       fill(230,0,0)
+         //       line(310, 512, 310 + angulo, 380);
+         //       angulo = 5 + angulo;
+         //    }
+         // }
+         // fill(230,0,0)
+         // line(310, 512, 310 + angulo, 380);
+         // angulo = 5 + angulo;
+
+            
+         // if (angulo > 200){
+         //    angulo = -160;
+         // }
+         // if (angulo < 0){
+         //    angulo = 1;
+         // }
+         // if (mouseIsPressed){
+         //    fill(230,0,0)
+         //    line(310, 512, 310 + angulo, 380);
+         // }
+         
+         
       
+
       
-    }};
+      // draw = function(){
+      //    // drawGame();
+      // }
+      // if (mouseIsPressed){
+      //    fill(230,0,0)
+      //    line(310, 512, 310 + angulo, 380);
+      // }
+
+      // mousePressed = function(){
+      //    mouseIsPressed = true;
+      //    background(0, 0, 0);
+      //    drawGame_two();
+      // }
+      // if(mouseIsPressed){
+      //    mousePressed();
+      // }
+   
+   // mouseClicked = function(){
+   //    fill(166, 179, 185)
+   //    ellipse(310, 300, 80, 75)
+   // }
+
+
+};
 
     // Get the canvas that Processing-js will use
     var canvas = document.getElementById("mycanvas"); 

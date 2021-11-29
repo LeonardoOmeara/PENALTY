@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;;
+}
+
+body {
+
+    background-color: white;
+    color: greenyellow;
+
+
+}
+
+#contenedor {
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: green;
+}
+header{
+    height: 150px;
+    background-color: green;
+}
+header h1{
+    font-size: 50px;
+    text-align: center;
+    line-height: 130px;
+}
+header h4{
+    font-size: 20px;
+    text-align: center;
+}
